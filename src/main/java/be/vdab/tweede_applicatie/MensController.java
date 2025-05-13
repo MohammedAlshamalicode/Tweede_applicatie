@@ -18,6 +18,6 @@ public class MensController {
     @GetMapping("/{id}/todos")
     public List<TodoDTO> getTodosVoorMens (@PathVariable long id) {
 
-        return mensService.getTodosVoorMens(id).stream().sorted(Comparator.comparing(TodoDTO::getPrioriteit)).toList();
+        return mensService.getTodosVoorMens(id).stream().sorted(Comparator.comparing(TodoDTO::prioriteit)).toList();
     }
 }
